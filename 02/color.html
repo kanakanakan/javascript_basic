@@ -31,8 +31,13 @@
         //     document.body.style.backgroundColor = '#0000ff';
         // })
 
-        document.body.style.fontSize = '16px';
-        redBtn.addEventListener('click', function () { })
+        redBtn.addEventListener('click', function () {
+            document.body.style.backgroundColor = `#${redBtn.innerHTML}`;
+        })
+
+        greenBtn.addEventListener('click', function () {
+            document.body.style.backgroundColor = `#${redBtn.innerHTML}`;
+        })
 
         // 問題１は内容操作
         // setattributeつかう
