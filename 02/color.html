@@ -19,24 +19,17 @@
         const greenBtn = document.getElementById('green');
         const blueBtn = document.getElementById('blue');
 
-        // redBtn.addEventListener('click', function () {
-        //     document.body.style.backgroundColor = '#ff0000';
-        // })
-
-        // greenBtn.addEventListener('click', function () {
-        //     document.body.style.backgroundColor = '#00ff00';
-        // })
-
-        // blueBtn.addEventListener('click', function () {
-        //     document.body.style.backgroundColor = '#0000ff';
-        // })
-
         redBtn.addEventListener('click', function () {
             document.body.style.backgroundColor = `#${redBtn.innerHTML}`;
         })
 
         greenBtn.addEventListener('click', function () {
-            document.body.style.backgroundColor = `#${redBtn.innerHTML}`;
+            document.body.style.backgroundColor = `#${greenBtn.innerHTML}`;
+        })
+
+
+        blueBtn.addEventListener('click', function () {
+            document.body.style.backgroundColor = `#${blueBtn.innerHTML}`;
         })
 
         // 問題１は内容操作
