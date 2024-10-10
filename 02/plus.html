@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習01</title>
+</head>
+
+<body>
+    <p id="result">0</p>
+
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+
+
+    <script>
+        // const btn = document.getElementById('plus');
+
+        // btn.addEventListener('click', function () {
+        //     let name = 1;
+        //     name += 1;
+        //     console.log(name);
+        // })
+
+        // let num = 0;
+        // const plusBtn = document.getElementById('plus');
+        // plusBtn.innerHTML = '数字を増やす';
+
+        // plusBtn.addEventListener('click', function () {
+        //     num = num + 1;
+        //     console.log(num);
+        // });
+
+
+        let num = 0;
+
+        const result = document.getElementById('result');
+        const plusBtn = document.getElementById('plus');
+        const minusBtn = document.getElementById('minus');
+
+        plusBtn.addEventListener('click', function () {
+            num += 1;
+            // 自己代入演算子
+            // num = num + 1;
+            result.innerHTML = num;
+            console.log(num);
+        })
+
+        minusBtn.addEventListener('click', function () {
+            num -= 1;
+            result.innerHTML = num;
+            console.log(num);
+        })
+
+
+        console.log('takagi' + 'hirotaka');
+        console.log(10 + 'px');
+
+        let val = 1;
+        // console.log('url(' + val + '.png)');
+        console.log(`url(${val +=1}.png)`);
+    </script>
+</body>
+
+</html>
