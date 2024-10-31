@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリックゲーム２</title>
+</head>
+
+<body>
+    <img id="img" src="https://trident.takagino.net/doc2024/javascript/assets/03/monster.png" alt="">
+    <p id="result"></p>
+
+    <script>
+        const img = document.getElementById('img');
+        const result = document.getElementById('result');
+
+        let num = 0;
+        result.innerHTML = `${num}回`;
+
+        img.addEventListener('click', function () {
+            if (num < 30) {
+                num += 1;
+                result.innerHTML = `${num}回`;
+            }
+
+            if (num == 10) {
+                result.innerHTML = '10回達成、おめでとう!';
+            } else if (num == 20) {
+                result.innerHTML = '20回達成、おめでとう!';
+            } else if (num == 30) {
+                result.innerHTML = '30回クリア!おめでとう!';
+            }
+        })
+
+        //    monster.addEventListener('click', function () {
+        //         if (count < 30) {
+        //             count += 1;
+        //             if (count == 10) {
+        //                 hp.innerHTML = '10回達成、おめでとう！'
+        //             } else if (count == 20) {
+        //                 hp.innerHTML = '20回達成、おめでとう！'
+        //             } else if (count == 30) {
+        //                 hp.innerHTML = '30回クリア！おめでとう！'
+        //             } else {
+        //                 hp.innerHTML = `${count}回`;
+        //             }
+        //         }
+        //     });
+    </script>
+</body>
+
+</html>

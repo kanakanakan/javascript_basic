@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじ</title>
+</head>
+
+<body>
+    <button id="btn">占う</button>
+    <p><img id="result" src="https://trident.takagino.net/doc2024/javascript/assets/04/omikuji/omikuji.png" alt="占う">
+    </p>
+    <p id="message">何か一言が表示されます。</p>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const result = document.getElementById('result');
+        const message = document.getElementById('message');
+        const path = 'https://trident.takagino.net/doc2024/javascript/assets/04/omikuji';
+
+        btn.addEventListener('click', function () {
+            let num = Math.floor(Math.random() * 5);
+            console.log(num);
+
+            switch (num) {
+                case 0:
+                    result.setAttribute('src', `${path}/daikichi.png`);
+                    message.innerHTML = '夢が1つ叶う'
+                    break;
+                case 1:
+                    result.setAttribute('src', `${path}/chuukichi.png`);
+                    message.innerHTML = '美味しいものが食べられる';
+                    break;
+                case 2:
+                    result.setAttribute('src', `${path}/syoukichi.png`);
+                    message.innerHTML = '赤信号に引っかからない';
+                    break;
+                case 3:
+                    result.setAttribute('src', `${path}/kyou.png`);
+                    message.innerHTML = '靴下がかたっぽ見つからない';
+                    break;
+                case 4:
+                    result.setAttribute('src', `${path}/daikyou.png`);
+                    message.innerHTML = '鳥のフンが頭に落ちちゃう';
+                    break;
+                default:
+            }
+        })
+    </script>
+</body>
+
+</html>
