@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配列</title>
+</head>
+
+<body>
+    <script>
+        const fruits = ['apple', 'banana', 'orange'];
+        console.log(fruits[0]);
+
+        fruits[1] = 'peach';
+        fruits[4] = 'egg';
+        console.log(fruits.length);
+        console.log(fruits[fruits.length - 1]);
+        // フルーツの数(length)から-1した数が一番最後の値
+
+        // fruits = ['apple'];配列自体を変えるとエラーがでる、letで宣言すること
+
+        const empty = [];
+        console.log(empty);
+    </script>
+</body>
+
+</html>
