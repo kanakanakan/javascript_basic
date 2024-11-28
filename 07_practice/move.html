@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ムーブ</title>
+</head>
+
+<body>
+    <div>
+        <button id="right">→</button>
+    </div>
+
+    <img id="monster" src="https://pbs.twimg.com/media/EXae-7lWkAANYU6.png" alt="">
+
+    <script>
+        num = 0;
+        const right = document.querySelector('#right');
+        const monster = document.querySelector('#monster');
+
+        right.addEventListener('click', function () {
+            num += 1;
+            monster.style.transform = `translateX(${num * 10}px)`;
+        })
+    </script>
+</body>
+
+</html>

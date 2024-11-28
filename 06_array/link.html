@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リンク</title>
+</head>
+
+<body>
+    <ul class="links">
+        <li><a href="https://computer.trident.ac.jp/courses/game_science/">ゲームサイエンス学科</a></li>
+        <li><a href="https://computer.trident.ac.jp/courses/cg_specialist/">CGスペシャリスト学科</a></li>
+        <li><a href="https://computer.trident.ac.jp/courses/web_design/">Web学科</a></li>
+    </ul>
+    <p class="result">URLが表示されます。</p>
+
+    <script>
+        const result = document.querySelector('.result');
+        const link = document.querySelectorAll('.links a');
+        const text = result.innerHTML;
+
+        for (let i = 0; i < link.length; i++) {
+            link[i].addEventListener('mouseover', function () {
+                result.innerHTML = link[i].getAttribute('href');
+            });
+            link[i].addEventListener('mouseout', function () {
+                result.innerHTML = text;
+            });
+        }
+
+        // querySelectorで取得した値は全てfor文で繰り返す
+    </script>
+</body>
+
+</html>

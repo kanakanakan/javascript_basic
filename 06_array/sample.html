@@ -8,20 +8,54 @@
 </head>
 
 <body>
-    <script>
-        const fruits = ['apple', 'banana', 'orange'];
-        console.log(fruits[0]);
+    <ul>
+        <li>aaa</li>
+        <li>bbb</li>
+        <li class="obj">ccc</li>
+        <li class="obj">ddd</li>
+    </ul>
 
-        fruits[1] = 'peach';
-        fruits[4] = 'egg';
-        console.log(fruits.length);
-        console.log(fruits[fruits.length - 1]);
+    <script>
+        const elem = document.querySelectorAll('.obj');
+        console.log(elem);
+
+        // const list = document.getElementsByClassName('obj');
+        // console.log(list.length);
+
+        // const fruits = ['apple', 'banana', 'orange'];
+
+        // for (let i = 0; i < fruits.length; i++) {
+        //     console.log(`${i}番目の値は、${fruits[i]}です。`);
+        // }
+
+        // const num = [5, 10, 15, 20, 25, 30];
+        // let sum = 0;
+
+        // for (let i = 0; i < num.length; i++) {
+        //     sum += num[i];
+        // }
+        // console.log(sum);
+
+        // for (let i = 1; i < num.length - 1; i++) {
+        //     sum += num[i];
+        // }
+        // console.log(sum);
+
+
+
+        // const fruits = ['apple', 'banana', 'orange'];
+        // console.log(fruits[0]);
+
+        // fruits[1] = 'peach';
+        // fruits[4] = 'egg';
+        // console.log(fruits.length);
+        // console.log(fruits[fruits.length - 1]);
         // フルーツの数(length)から-1した数が一番最後の値
 
         // fruits = ['apple'];配列自体を変えるとエラーがでる、letで宣言すること
 
-        const empty = [];
-        console.log(empty);
+        // const empty = [];
+        // console.log(empty);
     </script>
 </body>
 
