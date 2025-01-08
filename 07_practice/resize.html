@@ -14,6 +14,7 @@
         const result = document.querySelector('#result');
 
         window.addEventListener('resize', function () {
+            /*複数の値をコンソールに表示したいときは、カンマで区切る*/
             console.log(window.innerWidth, window.innerHeight);
 
             result.innerHTML = `${window.innerWidth}px:${window.innerHeight}px`;

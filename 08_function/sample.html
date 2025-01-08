@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関数</title>
+</head>
+
+<body>
+    <h1>見出し</h1>
+    <p>本文</p>
+    <button>ボタン</button>
+
+    <script>
+        // function testFunc(val1 = 10, val2 = 20) {
+        //     return val1 + val2;
+        // }
+        // /*関数名はキャメル記法が望ましい*/
+
+        // console.log(testFunc());
+        // testFunc(30, 50);
+
+        // let doller = changeDoller(100);
+        // console.log(doller);
+
+        // function changeDoller(yen) {
+        //     return yen * 150;
+        // }
+
+        //---------------------------------
+
+        // let text = setText("takagi");
+        // console.log(text);
+
+        // function setText(txt) {
+        //     return `Hello! ${txt}`;
+        // };
+
+        //     const textFunc = function (val1, val2) {
+        //         return val1 + val2;
+        //     }
+
+        //     console.log(textFunc(10, 20));
+        //
+
+        //---------------------------------
+        // const setZero = function (val) {
+        //     if (val => 0 && val < 10) {
+        //         val = `0${val}`;
+        //     }
+        // };
+
+        // const setZero = (val) => {
+        //     console.log("アロー関数");
+        // }
+
+        // if (val >= 0)
+        //     let setZero = function (val) {
+        //         return `0${val}`;
+        //     }else {
+        //         return val;
+        // };
+
+        let value = [5, 10, 15, 20, 25];
+
+        const getAverage = (val) => {
+            let num = 0;
+            for (let i = 0; i < val.length; i++) {
+                num += val[i];
+            }
+            num /= val.length;
+
+            return val;
+        };
+
+        console.log(getAverage(value));
+
+
+        const clickEvent = (e) => {
+            console.log(e);
+            e.target.style.color = "#f00";
+        }
+
+        window.addEventListener('click', (e) => {
+            console.log(e.target);
+        });
+        // イベント登録は関数式のあとに書く
+        // イベントを登録するときには関数のあとに()をつけない
+    </script>
+</body>
+
+</html>

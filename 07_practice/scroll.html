@@ -23,8 +23,11 @@
         border-radius: 50%;
         background: rgba(0, 0, 0, 0.5);
         color: #fff;
+        /*1行のテキストを上下中央にする*/
         font-size: 1rem;
         line-height: 1rem;
+
+        /*1行でないものを上下中央にする*/
         text-align: center;
         cursor: pointer;
         display: none;
@@ -36,20 +39,21 @@
 </style>
 
 <body>
-    <button id="toTop">↑</button>
+    <button id="toTop" class="active">↑</button>
 
     <script>
         const toTop = document.querySelector('#toTop');
-        const scroll = 300;
+        const limit = 300;
 
         window.addEventListener('scroll', function () {
             console.log(window.scrollY);
-        })
 
-        if (window.scrollY > limit &&
-            !toTop.classList.contains("active")) {
-            toTop.classList.add(active);
-        }
+            if (window.scrollY > limit && !toTop.classList.contains("active")) {
+                toTop.classList.add("active");
+            } else if (window.schrollY <= limit && toTop.classList.contains("active")) {
+                toTop.classList.remove("active");
+            }
+        });
 
     </script>
 </body>

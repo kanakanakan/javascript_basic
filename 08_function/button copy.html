@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指定ボタンとランダムボタン</title>
+</head>
+
+<body>
+    <script>
+        // let count = 0;
+        // let timer;
+
+        // // 関数の定義
+        // const countUp = () => {
+        //     console.log(count++);
+        //     // ++countだとコンソールには1と表示される。この場合は0
+        //     if (count > 5) {
+        //         clearInterval(timer);
+        //         // clearIntervalでsetIntervalの処理を停止する
+        //     }
+        // }
+
+        // // 関数の実行
+        // timer = setInterval(countUp, 1000);
+        // (関数名,時間)
+        // // setInterval　一定時間ごとに特定の処理を繰り返す　例）スライドショーを3秒ごとに動かす
+        // // 1000が1秒
+
+        // const changeColor = () => {
+        //     let r = Math.floor(Math.random() * 256);
+        //     let g = Math.floor(Math.random() * 256);
+        //     let b = Math.floor(Math.random() * 256);
+
+        //     document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+        // }
+
+        // timer = setInterval(changeColor, 1000);
+
+        // document.body.addEventLister('click', () => {
+        //     clearInterval(timer2);
+        // })
+
+        let count = 0;
+
+        const countUp = () => {
+            console.log(count++);
+            timer = setTimeout(countUp, 1000);
+            // setTimeout…一定時間後に一度だけ特定の処理をおこなう
+
+            if (count > 5) {
+                clearTimeout(timer);
+            }
+        };
+
+        countUp();
+
+        // timer = setTimeout(countUp, 1000);
+        // setTimeout…一定時間後に一度だけ特定の処理をおこなう
+    </script>
+</body>
+
+</html>
