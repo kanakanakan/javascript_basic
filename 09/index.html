@@ -121,10 +121,9 @@
         let before = 0;
 
         const changePic = () => {
-            // アニメーションをリセットして再適用
-            backgroundImg.classList.remove('zoom-animation');  // アニメーションクラスを削除
-            void backgroundImg.offsetWidth;  // ブラウザに再描画させるために何かしらのプロパティにアクセス（強制的にリフロー）
-            backgroundImg.classList.add('zoom-animation');  // 再度アニメーションクラスを追加
+            backgroundImg.classList.remove('zoom-animation');
+            void backgroundImg.offsetWidth;
+            backgroundImg.classList.add('zoom-animation');
 
             let randomIndex = Math.floor(Math.random() * 20) + 1;
             while (before == randomIndex) {
