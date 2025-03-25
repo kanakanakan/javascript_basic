@@ -10,9 +10,7 @@
 <body>
     <h1>click game</h1>
     <div class="monster">
-        <p class="name">名前</p>
-        <img class="pic" src="#" width="200" />
-        <p class="hp">HP:</p>
+
     </div>
 
     <script>
@@ -24,6 +22,33 @@
                 alert("クリア！");
             },
         };
+
+        const monster = document.querySelector('.monster');
+
+        const name = document.createElement('p');
+        name.textContent = obj.name;
+        monster.append(name);
+
+        const pic = document.createElement('img');
+        pic.setAttribute('src', obj.pic);
+        pic.setAttribute('width', 200);
+
+        pic.setAttribute('src', obj.pic);
+        pic.addEventListener('click', () => {
+            if (obj.hp > 0) {
+                hp.textContent = `HP:${--obj.hp}`;
+
+                if (obj.hp == 0) {
+                    obj.clear();
+                }
+            }
+        });
+
+        monster.append(pic);
+
+        const hp = document.createElement('p');
+        hp.textContent = `HP:${obj.hp}`;
+        monster.append(hp);
     </script>
 </body>
 
